@@ -7,7 +7,7 @@ function Navbar()
     return (
         <nav className="bg-blue-900 text-white px-6 py-4 flex justify-between items-center fixed w-full top 0 z-50 shadow-lg">
             <div className="text-xl font-bold tracking-wide">
-                Sneray IT Solutions Pvt. Ltd.
+                SneRay IT Solutions Pvt. Ltd.
             </div>
 
             <ul className="hidden md:flex gap-8 font-medium">
