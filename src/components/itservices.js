@@ -1,63 +1,122 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const services = [
-  {icon:'🌐',title:'Website Development',desc:'Responsive, fast, and professional websites tailored to your business goals.'},
-  {icon:'💻',title:'Software Development',desc:'Custom software solutions that streamline operations and drive efficiency.'},
-  {icon:'📱',title:'Mobile App Development',desc:'iOS and Android applications with intuitive UX and modern architecture.'},
-  {icon:'📣',title:'Digital Marketing',desc:'SEO, social media, and performance marketing to grow your digital presence.'},
-  {icon:'🎨',title:'Graphic Designing',desc:'Brand identity, marketing materials, and visual content that stands out.'},
-  {icon:'✏️',title:'UI/UX Designing',desc:'User-centric interface designs that convert visitors into customers.'},
-  {icon:'⚙️',title:'ERP & CRM Solutions',desc:'Enterprise-grade systems for resource planning and customer management.'},
-  {icon:'🧠',title:'IT Consultancy',desc:'Strategic IT advisory to help your business scale with the right technology.'},
-  {icon:'🔧',title:'Technical Support & Maintenance',desc:'Reliable maintenance and support to keep your systems running smoothly.'}
+{
+number: '01',
+title: 'Website Development',
+description: 'Modern, responsive websites built for performance, speed, and user experience that converts visitors into customers.',
+},
+{
+number: '02',
+title: 'Software Development',
+description: 'Custom software solutions designed to streamline your business operations and scale with your growth.',
+},
+{
+number: '03',
+title: 'Mobile App Development',
+description: 'Powerful iOS and Android applications built for real-world business needs with seamless user experience.',
+},
+{
+number: '04',
+title: 'Digital Marketing',
+description: 'Data-driven marketing strategies that grow your brand, increase visibility, and drive measurable results.',
+},
+{
+number: '05',
+title: 'UI/UX Designing',
+description: 'Clean, intuitive designs that create seamless user experiences across all platforms and devices.',
+},
+{
+number: '06',
+title: 'Graphic Designing',
+description: 'Professional visual identity and brand design that makes your business stand out from the competition.',
+},
+{
+number: '07',
+title: 'ERP & CRM Solutions',
+description: 'Enterprise-grade systems to manage operations, customers, and business workflows efficiently.',
+},
+{
+number: '08',
+title: 'IT Consultancy',
+description: 'Strategic technology guidance to help your business make smarter decisions and grow faster.',
+},
+{
+number: '09',
+title: 'Technical Support & Maintenance',
+description: 'Reliable ongoing support to keep your systems running at peak performance around the clock.',
+},
 ];
 
-const s = {
-  section:{padding:'6rem 0',position:'relative',overflow:'hidden'},
+export default function ITServices() {
+const [active, setActive] = useState('01');
+const activeService = services.find(s => s.number === active);
 
-  bgGrid:{position:'absolute',inset:0,backgroundImage:`linear-gradient(rgba(61,155,233,0.04) 1px, transparent 1px),linear-gradient(90deg, rgba(61,155,233,0.04) 1px, transparent 1px)`,backgroundSize:'50px 50px',pointerEvents:'none'},
+return (
+<section id="services" className="py-24 bg-gray-50 text-gray-900">
+<div className="max-w-6xl mx-auto px-6">
 
-  container:{maxWidth:'1200px',margin:'0 auto',padding:'0 2rem',position:'relative',zIndex:2},
+{/* Heading */}
+<div className="text-center mb-20">
+<p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">What We Offer</p>
+<h2 className="text-4xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+Complete <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">IT Solutions</span>
+</h2>
+<div className="w-20 h-1 bg-blue-600 mx-auto mb-6"></div>
+<p className="text-gray-500 text-lg max-w-3xl mx-auto leading-relaxed">
+Modern and innovative IT solutions for startups, businesses, and organizations — from strategy to execution.
+</p>
+</div>
 
-  headerWrap:{textAlign:'center',marginBottom:'3rem'},
+{/* Interactive Split Layout */}
+<div className="grid md:grid-cols-2 gap-0 border border-gray-200 rounded-3xl overflow-hidden shadow-xl">
 
-  sectionLabel:{fontSize:'0.78rem',fontWeight:600,textTransform:'uppercase',letterSpacing:'0.1em',color:'#BFDBFE',marginBottom:'0.75rem'},
+{/* Left — Service List */}
+<div className="border-r border-gray-200">
+{services.map((s) => (
+<div
+key={s.number}
+onClick={() => setActive(s.number)}
+className={`flex items-center gap-5 px-8 py-5 cursor-pointer border-b border-gray-100 transition-all duration-300 ${
+active === s.number
+? 'bg-blue-600 text-white'
+: 'hover:bg-blue-50 text-gray-500 hover:text-gray-900'
+}`}
+>
+<span className={`text-xs font-bold ${active === s.number ? 'text-blue-200' : 'text-gray-300'}`}>
+{s.number}
+</span>
+<span className="font-semibold text-sm">{s.title}</span>
+{active === s.number && (
+<span className="ml-auto text-blue-200 font-bold">→</span>
+)}
+</div>
+))}
+</div>
 
-  sectionTitle:{fontFamily:'var(--font-head)',fontSize:'clamp(1.8rem, 3vw, 2.8rem)',fontWeight:800,color:'var(--white)',lineHeight:1.2,letterSpacing:'-0.02em',marginBottom:'1rem'},
+{/* Right — Active Service Detail */}
+<div className="flex flex-col justify-center px-12 py-16 bg-white">
+<p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">
+Service {activeService.number}
+</p>
+<h3 className="text-3xl font-extrabold text-gray-900 mb-6 leading-tight">
+{activeService.title}
+</h3>
+<div className="w-12 h-1 bg-blue-600 mb-6"></div>
+<p className="text-gray-500 text-lg leading-relaxed mb-8">
+{activeService.description}
+</p>
 
-  sectionDesc:{fontSize:'1.05rem',color:'rgba(255,255,255,0.6)',maxWidth:'580px',lineHeight:1.75,margin:'0 auto'},
+<a href="#contact"
+className="inline-block w-fit bg-blue-600 hover:bg-blue-500 text-white font-bold py-3 px-8 rounded-xl transition duration-300 text-sm"
+>
+Get Started
+</a>
+</div>
 
-  grid:{display:'grid',gridTemplateColumns:'repeat(3,1fr)',gap:'1.25rem',marginTop:'3rem'},
+</div>
 
-  card:{background:'rgba(255,255,255,0.05)',border:'1px solid rgba(255,255,255,0.09)',borderRadius:'var(--r2)',padding:'1.75rem',cursor:'default'},
-
-  cardIcon:{fontSize:'2rem',marginBottom:'1rem'},
-
-  cardTitle:{fontFamily:'var(--font-head)',fontSize:'1.05rem',fontWeight:700,color:'var(--white)',marginBottom:'0.5rem'},
-  
-  cardDesc:{fontSize:'0.85rem',color:'rgba(255,255,255,0.55)',lineHeight:1.6}
-};
-
-const ITServices = () => (
-  <section id="services" className="py-24 bg-blue-900 text-white">
-    <div style={s.bgGrid} />
-    <div style={s.container}>
-      <div style={s.headerWrap}>
-        <p style={s.sectionLabel}>IT Services</p>
-        <h2 style={s.sectionTitle}>Complete IT Solutions</h2>
-        <p style={s.sectionDesc}>Modern and innovative IT solutions for startups, businesses, and organizations — built for growth and performance.</p>
-      </div>
-      <div style={s.grid}>
-        {services.map(({icon,title,desc})=> (
-          <div key={title} style={s.card}>
-            <div style={s.cardIcon}>{icon}</div>
-            <h3 style={s.cardTitle}>{title}</h3>
-            <p style={s.cardDesc}>{desc}</p>
-          </div>
-        ))}
-      </div>
-    </div>
-  </section>
+</div>
+</section>
 );
-
-export default ITServices;
+}

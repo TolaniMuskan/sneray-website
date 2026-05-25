@@ -5,7 +5,7 @@ function Navbar()
     const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-blue-900 text-white px-6 py-4 flex justify-between items-center fixed w-full top 0 z-50 shadow-lg">
+        <nav className="bg-slate-900/90 backdrop-blur-md text-white px-6 py-4 flex justify-between items-center fixed w-full top 0 z-50 border-b border-slate-700">
             <div className="text-xl font-bold tracking-wide">
                 SneRay IT Solutions Pvt. Ltd.
             </div>
