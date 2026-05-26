@@ -95,15 +95,15 @@ active === s.number
 </div>
 
 {/* Right — Active Service Detail */}
-<div className="flex flex-col justify-center px-12 py-16 bg-white">
-<p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-4">
+<div className="flex flex-col justify-center px-12 py-16 bg-gradient-to-br from-blue-900 to-blue-950">
+<p className="text-xs font-bold uppercase tracking-widest text-white mb-4">
 Service {activeService.number}
 </p>
-<h3 className="text-3xl font-extrabold text-gray-900 mb-6 leading-tight">
+<h3 className="text-3xl font-extrabold text-white mb-6 leading-tight">
 {activeService.title}
 </h3>
-<div className="w-12 h-1 bg-blue-600 mb-6"></div>
-<p className="text-gray-500 text-lg leading-relaxed mb-8">
+<div className="w-12 h-1 bg-black mb-6"></div>
+<p className="text-black text-white leading-relaxed mb-8">
 {activeService.description}
 </p>
 
