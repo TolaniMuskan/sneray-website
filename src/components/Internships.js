@@ -29,7 +29,6 @@ const features = [
 const highlights = [
 { value: 'Online / Offline / Hybrid', label: 'Mode' },
 { value: '1 - 3 Months', label: 'Duration' },
-{ value: '₹1,000', label: 'Registration & Certification Fee' },
 { value: 'Industry-Oriented', label: 'Learning Environment' },
 ];
 
@@ -51,7 +50,7 @@ Practical exposure, technical skills, corporate understanding, and real-world pr
 </div>
 
 {/* Highlights Stats */}
-<div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-20">
+<div className="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 mb-20">
 {highlights.map((h, i) => (
 <div key={i} className="border border-blue-700/50 rounded-2xl p-6 text-center bg-blue-900/20 backdrop-blur-sm hover:border-blue-500 transition-all duration-300">
 <div className="text-2xl font-extrabold text-white mb-1">{h.value}</div>

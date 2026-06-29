@@ -4,7 +4,6 @@ const metrics = [
 { value: 'B.Tech', label: 'Engineering Interns' },
 { value: 'MBA', label: 'Management Interns' },
 { value: 'Live', label: 'Project Exposure' },
-{ value: '₹1K', label: 'Reg. & Cert. Fee' },
 ];
 
 const pillars = [
@@ -33,7 +32,7 @@ SneRay IT Solutions Pvt. Ltd. is a career-focused IT company offering internship
 <div className="bg-blue-900 rounded-2xl p-8">
 <h3 className="text-2xl font-bold text-white mb-3">Pvt. Ltd. — Registered IT Company</h3>
 <p className="text-blue-200 mb-6">Career-focused, industry-driven, and student-centric.</p>
-<div className="grid grid-cols-2 gap-3">
+<div className="space-y-3">
 {metrics.map((m) => (
 <div key={m.label} className="bg-blue-800 p-4 rounded-xl text-center">
 <div className="text-2xl font-extrabold text-white">{m.value}</div>

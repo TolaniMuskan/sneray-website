@@ -79,11 +79,10 @@ className="group relative border border-blue-700/30 rounded-2xl p-8 bg-white/5 h
 </div>
 
 {/* Bottom Stats Bar */}
-<div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-6">
+<div className="mt-20 max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
 {[
 { value: 'B.Tech', label: 'Engineering Programs' },
 { value: 'MBA', label: 'Management Programs' },
-{ value: '₹1K', label: 'Registration Fee' },
 { value: '3+', label: 'Months of Learning' },
 ].map((s, i) => (
 <div key={i} className="text-center border border-blue-700/30 rounded-2xl py-6 px-4 bg-blue-900/20">

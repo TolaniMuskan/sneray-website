@@ -1,7 +1,7 @@
-import { FaInstagram, FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaInstagram, FaLinkedin } from "react-icons/fa";
 function Footer() {
     return (
-        <footer className="bg-[#0B0B0B] text-white py-10 px-6 border-t border-gray-700">
+        <footer id="contact" className="scroll-mt-24 bg-[#0B0B0B] text-white py-10 px-6 border-t border-gray-700">
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
                 <div>
                     <h2 className="text-xl font-bold">
@@ -21,9 +21,12 @@ function Footer() {
                                 Address:B4, Sheikh, Safa Complex, 2, Waghmare Rd, Shankar Kalat Nagar, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057
                             </p>
                             <div className="flex gap-4 mt-3 text-xl">
-                                <FaFacebook className="cursor-pointer hover:text-blue-500"/>
-                                <FaInstagram className="cursor-pointer hover:text-pink-500"/>
-                                <FaLinkedin className="cursor-pointer hover:text-blue-400"/>
+                                <a href="https://www.instagram.com/snerayitsolutions/" target="_blank" rel="noopener noreferrer">
+                                    <FaInstagram className="cursor-pointer hover:text-pink-500"/>
+                                </a>
+                                <a href="https://www.linkedin.com/company/sneray-it-solutions-pvt-ltd/posts/?feedView=all" target="_blank" rel="noopener noreferrer">
+                                    <FaLinkedin className="cursor-pointer hover:text-blue-400"/>
+                                </a>
                             </div>
                             </div>
                             <div className="w-full md:w-1/3">
