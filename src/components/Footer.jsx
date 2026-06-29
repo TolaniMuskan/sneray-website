@@ -5,20 +5,20 @@ function Footer() {
             <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between">
                 <div>
                     <h2 className="text-xl font-bold">
-                        SneRay It Solutions Pvt. Ltd
+                        SneRay IT Solutions Pvt. Ltd
                     </h2>
                     <p className="text-gray-400 mt-2">
                         Email:{" "}
                         <a href="mailto:contact@SneRay.com"
                         className="text-blue-400 hover:underline">
-                            contact@SneRay.com
+                            hr@snerayitsolution.com
                         </a>
                         </p>
                         <p className="text-gray-400 mt-1">
-                            Phone:91-80877 55669
+                            Phone:7517984316
                             </p>
                             <p className="text-gray-400 mt-1">
-                                Address:B4, Sheikh, Safa Complex, 2, Waghmare Rd, Shankar Kalat Nagar, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057
+                                Address: B4, Sheikh, Safa Complex, 2, Waghmare Rd, Shankar Kalat Nagar, Wakad, Pune, Pimpri-Chinchwad, Maharashtra 411057
                             </p>
                             <div className="flex gap-4 mt-3 text-xl">
                                 <a href="https://www.instagram.com/snerayitsolutions/" target="_blank" rel="noopener noreferrer">
@@ -47,7 +47,7 @@ function Footer() {
 
                                 </div>
                                 <div className="text-center text-gray-400 mt-4">
-                                    &copy; 2026 SneRay It Solutions Pvt. Ltd. All rights reserved.
+                                    &copy; 2026 SneRay IT Solutions Pvt. Ltd. All Rights Reserved.
                                     </div>
                                     </footer>
     );
